@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/Background2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: contain;
+            background-position: center;
+            display: flex;
+            justify-content: flex-end; /* Align container to the right */
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator-container {
+            background-color: pink;
+            padding: 100px;
+            border-radius: 20px;
+            text-align: center;
+            width: 500px; 
+            margin-right: 150px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            color: #b4338b;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #b4338b;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+            color: #b4338b;
+        }
+
+        input[type="submit"] {
+            background-color: #b4338b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #b4338b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <h1>My Calculator</h1>
+        <form action="/Calculating" method="post">
+            <input type="number" name="num1" placeholder="Enter The first number" required>
+            <br>
+            <select name="operation" required>
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+            <br><br>
+            <input type="number" name="num2" placeholder="Enter The second number" required>
+            <br><br><br>
+            <input type="submit" value="Get the results">
+        </form>
+        <br>
+        {% if result %}
+        <h2>Result: {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+
+</html>
