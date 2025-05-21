@@ -1,25 +1,23 @@
-version: "3.8"
-
 services:
   flaskapp:
     build:
-      context: ./flaskapp
+      context: ./Simple-Flask-Calculator
     ports:
       - "8070:8070"
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/logsdb
+      - DATABASE_URL=postgresql://postgres:1234@db:5432/logsdb
 
   logger:
     build:
-      context: ./logger-service
+      context: ./loggerService
     ports:
       - "5001:5001"
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/logsdb
+      - DATABASE_URL=postgresql://postgres:1234@db:5432/logsdb
 
   db:
     image: postgres:14
