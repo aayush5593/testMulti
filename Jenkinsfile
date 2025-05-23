@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/aayush5593/testMulti.git'
+                git 'https://github.com/aayushhhsharma/testMulti.git'
             }
         }
 
@@ -34,24 +34,24 @@ pipeline {
 
         stage('Build and Push Flask Image') {
             steps {
-                sh "docker build -t ${FLASK_IMAGE}:${IMAGE_TAG} ./flaskapp"
+                sh "docker build -t ${FLASK_IMAGE}:${IMAGE_TAG} ./Simple-Flask-Calculator"
                 sh "docker push ${FLASK_IMAGE}:${IMAGE_TAG}"
             }
         }
 
         stage('Build and Push Logger Image') {
             steps {
-                sh "docker build -t ${LOGGER_IMAGE}:${IMAGE_TAG} ./logger"
+                sh "docker build -t ${LOGGER_IMAGE}:${IMAGE_TAG} ./loggerService"
                 sh "docker push ${LOGGER_IMAGE}:${IMAGE_TAG}"
             }
         }
 
-        stage('Build and Push DB Image') {
-            steps {
-                sh "docker build -t ${DB_IMAGE}:${IMAGE_TAG} ./db"
-                sh "docker push ${DB_IMAGE}:${IMAGE_TAG}"
-            }
-        }
+        // stage('Build and Push DB Image') {
+        //     steps {
+        //         sh "docker build -t ${DB_IMAGE}:${IMAGE_TAG} ./db"
+        //         sh "docker push ${DB_IMAGE}:${IMAGE_TAG}"
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
