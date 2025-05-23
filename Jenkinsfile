@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/aayushhhsharma/testMulti.git'
+                git 'https://github.com/aayush5593/testMulti.git'
             }
         }
 
