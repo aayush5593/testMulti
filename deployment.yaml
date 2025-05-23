@@ -2,76 +2,6 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db
-  labels:
-    app: db
-spec:
-  selector:
-    app: db
-  ports:
-    - name: postgres
-      protocol: TCP
-      port: 5432
-      targetPort: 5432
-  type: ClusterIP
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: db
-  labels:
-    app: db
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: db
-  template:
-    metadata:
-      labels:
-        app: db
-    spec:
-      containers:
-        - name: db
-          image: postgres:latest
-          ports:
-            - containerPort: 5432
-          env:
-            - name: POSTGRES_DB
-              value: yourdbname
-            - name: POSTGRES_USER
-              value: youruser
-            - name: POSTGRES_PASSWORD
-              value: yourpassword
-          resources:
-            requests:
-              cpu: "100m"
-              memory: "256Mi"
-            limits:
-              cpu: "500m"
-              memory: "512Mi"
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgres-data
-      volumes:
-        - name: postgres-data
-          persistentVolumeClaim:
-            claimName: postgres-pvc
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: postgres-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
----
-apiVersion: v1
-kind: Service
-metadata:
   name: flaskapp
   labels:
     app: flaskapp
@@ -104,7 +34,8 @@ spec:
     spec:
       containers:
         - name: flaskapp
-          image: aayush5593/testmulti:latest
+          image: aayushhhsharma/flaskapp:4dac059
+          imagePullPolicy: Always
           ports:
             - containerPort: 8070
           resources:
@@ -162,7 +93,8 @@ spec:
     spec:
       containers:
         - name: logger
-          image: aayush5593/logger:latest
+          image: aayushhhsharma/logger:4dac059
+          imagePullPolicy: Always
           ports:
             - containerPort: 5001
           resources:
