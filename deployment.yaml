@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: flaskapp
-          image: aayushhhsharma/flaskapp:4dac059
+          image: aayushhhsharma/flaskapp:c6b9a47
           imagePullPolicy: Always
           ports:
             - containerPort: 8070
@@ -93,7 +93,7 @@ spec:
     spec:
       containers:
         - name: logger
-          image: aayushhhsharma/logger:4dac059
+          image: aayushhhsharma/logger:c6b9a47
           imagePullPolicy: Always
           ports:
             - containerPort: 5001
