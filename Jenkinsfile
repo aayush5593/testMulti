@@ -6,6 +6,7 @@ pipeline {
         FLASK_IMAGE = "aayushhhsharma/flaskapp"
         LOGGER_IMAGE = "aayushhhsharma/logger"
         DB_IMAGE = "aayushhhsharma/db"
+        EMAIL_RECIPIENTS = 'your@email.com' // Replace with your actual email
     }
 
     stages {
@@ -46,13 +47,6 @@ pipeline {
             }
         }
 
-        // stage('Build and Push DB Image') {
-        //     steps {
-        //         sh "docker build -t ${DB_IMAGE}:${IMAGE_TAG} ./db"
-        //         sh "docker push ${DB_IMAGE}:${IMAGE_TAG}"
-        //     }
-        // }
-
         stage('Update Deployment YAML') {
             steps {
                 script {
@@ -69,10 +63,12 @@ pipeline {
                 sh 'kubectl apply -f k8s/deployment.yaml'
             }
         }
-	 post {
+    }
+
+    post {
         success {
             emailext(
-                subject: "Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                subject: "✅ Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: "Good news! The build succeeded.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}",
                 recipientProviders: [[$class: 'DevelopersRecipientProvider']],
                 to: "${EMAIL_RECIPIENTS}"
@@ -80,7 +76,7 @@ pipeline {
         }
         failure {
             emailext(
-                subject: "Build Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                subject: "❌ Build Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: "Oh no! The build failed.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}",
                 recipientProviders: [[$class: 'DevelopersRecipientProvider']],
                 to: "${EMAIL_RECIPIENTS}"
