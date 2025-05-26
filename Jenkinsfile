@@ -51,8 +51,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' k8s/deployment.yaml
-                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' k8s/deployment.yaml
+                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
+                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
                     """
                 }
             }
@@ -60,7 +60,7 @@ pipeline {
 
         stage('Apply to Kubernetes') {
             steps {
-                sh 'kubectl apply -f k8s/deployment.yaml'
+                sh 'kubectl apply -f deployment.yaml'
             }
         }
     }
