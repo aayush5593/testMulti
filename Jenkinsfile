@@ -6,7 +6,6 @@ pipeline {
         FLASK_IMAGE = "aayushhhsharma/flaskapp"
         LOGGER_IMAGE = "aayushhhsharma/logger"
         DB_IMAGE = "aayushhhsharma/db"
-        EMAIL_RECIPIENTS = 'your@email.com' // Replace with your actual email
     }
 
     stages {
