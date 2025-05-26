@@ -58,11 +58,11 @@ pipeline {
             }
         }
 
-        stage('Apply to Kubernetes') {
-            steps {
-                sh 'kubectl apply -f deployment.yaml --validate=false'
-            }
-        }
+        // stage('Apply to Kubernetes') {
+        //     steps {
+        //         sh 'kubectl apply -f deployment.yaml --validate=false'
+        //     }
+        // }
     }
 
     post {
