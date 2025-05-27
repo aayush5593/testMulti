@@ -45,13 +45,15 @@ pipeline {
                 sh "docker push ${LOGGER_IMAGE}:${IMAGE_TAG}"
             }
         }
-            stage('SonarQube Analysis') {
-                steps {
-                    withSonarQubeEnv('SonarQube') {
-                        sh '/opt/sonar-scanner/bin/sonar-scanner'
-                    }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh '/opt/sonar-scanner/bin/sonar-scanner'
                 }
             }
+        }
+
         stage('Update Deployment YAML') {
             steps {
                 script {
@@ -64,19 +66,20 @@ pipeline {
         }
 
         stage('Apply to Kubernetes') {
-             steps {
+            steps {
                 withCredentials([file(credentialsId: 'KubeCtlServer', variable: 'KUBECONFIG')]) {
-                 sh 'kubectl apply -f deployment.yaml'
+                    sh 'kubectl apply -f deployment.yaml'
                 }
             }
         }
+    }
 
     post {
-    success {
-        emailext(
-            subject: "✅ Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-            body: "Good news! The build succeeded.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}"
-        )
+        success {
+            emailext(
+                subject: "✅ Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: "Good news! The build succeeded.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}"
+            )
         }
         failure {
             emailext(
@@ -85,5 +88,4 @@ pipeline {
             )
         }
     }
-}
 }
