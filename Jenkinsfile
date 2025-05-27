@@ -18,8 +18,9 @@ pipeline {
         stage('Set Image Tag') {
             steps {
                 script {
-                    IMAGE_TAG = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
-                    echo "Using IMAGE_TAG: ${IMAGE_TAG}"
+                    // Set IMAGE_TAG in env so it can be used in all steps
+                    env.IMAGE_TAG = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    echo "Using IMAGE_TAG: ${env.IMAGE_TAG}"
                 }
             }
         }
@@ -57,6 +58,7 @@ pipeline {
         stage('Update Deployment YAML') {
             steps {
                 script {
+                    // Replace image tags in deployment.yaml with the new IMAGE_TAG
                     sh """
                     sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
                     sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
@@ -68,8 +70,8 @@ pipeline {
         stage('Apply to Kubernetes') {
             steps {
                 withCredentials([file(credentialsId: 'KubeCtlServer', variable: 'KUBECONFIG')]) {
-			sh 'ls -l $(dirname $KUBECONFIG)'
-                    	sh 'kubectl apply -f deployment.yaml'
+                    sh 'ls -l $(dirname $KUBECONFIG)'
+                    sh 'kubectl apply -f deployment.yaml'
                 }
             }
         }
@@ -79,13 +81,23 @@ pipeline {
         success {
             emailext(
                 subject: "✅ Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "Good news! The build succeeded.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}"
+                body: """Good news! The build succeeded.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+Check console output at: ${env.BUILD_URL}
+"""
             )
         }
         failure {
             emailext(
                 subject: "❌ Build Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                body: "Oh no! The build failed.\n\nJob: ${env.JOB_NAME}\nBuild Number: ${env.BUILD_NUMBER}\nCheck console output at: ${env.BUILD_URL}"
+                body: """Oh no! The build failed.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+Check console output at: ${env.BUILD_URL}
+"""
             )
         }
     }
