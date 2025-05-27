@@ -6024,4 +6024,394 @@ remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[K
 To https://github.com/aayush5593/testMulti.git
    fc3d16d..57b0eef  master -> master
 [?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ nano kubeconfig-embedded
-[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;126H(B[0;7m[ Read 32 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                 kubeconfig-embedded                                                                                                                          [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2dapiVersion: v1[3dclusters:[4d- cluster:[5;5Hcertificate-authority: /home/krayu/.minikube/ca.crt[6;5Hextensions:[7;5H- extension:[8;9Hlast-update: Tue, 27 May 2025 20:27:23 UTC[9;9Hprovider: minikube.sigs.k8s.io[10;9Hversion: v1.36.0[11;7Hname: cluster_info[12;5H
+[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;126H(B[0;7m[ Read 32 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                 kubeconfig-embedded                                                                                                                          [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2dapiVersion: v1[3dclusters:[4d- cluster:[5;5Hcertificate-authority: /home/krayu/.minikube/ca.crt[6;5Hextensions:[7;5H- extension:[8;9Hlast-update: Tue, 27 May 2025 20:27:23 UTC[9;9Hprovider: minikube.sigs.k8s.io[10;9Hversion: v1.36.0[11;7Hname: cluster_info[12;5Hserver: [94mhttps://192.168.49.2[13;3H[39m(B[mname: minikube[14dcontexts:[15d- context:[16;5Hcluster: minikube[17;5Hextensions:[18;5H- extension:[19;9Hlast-update: Tue, 27 May 2025 20:27:23 UTC[20;9Hprovider: minikube.sigs.k8s.io[21;9Hversion: v1.36.0[22;7Hname: context_info[23;5Hnamespace: default[24;5Huser: minikube[25;3Hname: minikube[26dcurrent-context: minikube[27dkind: Config[28dpreferences: {}[29dusers:[30d- name: minikube[31;3Huser:[32;5Hclient-certificate: /home/krayu/.minikube/profiles/minikube/client.crt[33;5Hclient-key: /home/krayu/.minikube/profiles/minikube/client.key[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[12;33H[?25l[1;148H(B[0;7m*[267G(B[m[?12l[?25h[12;33H[94m:[39m(B[m[?25l[94m8443[66d[39m(B[m[K[12;38H[?12l[?25h[?25l[66;106H(B[0;7m[ line 11/33 (33%), col 38/38 (100%), char 302/824 (36%) ](B[m[?12l[?25h[12;38H[?25l[66d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                       [67;1H Y(B[m Yes[K[68d(B[0;7m N(B[m No  [68;17H(B[0;7m^C(B[m Cancel[K[66;23H[?12l[?25h[?25l[67d(B[0;7m^G(B[m Help[67;68H(B[0;7mM-D(B[m DOS Format[67;135H(B[0;7mM-A(B[m Append[67;202H(B[0;7mM-B(B[m Backup File[68d(B[0;7m^C(B[m Cancel[17G         [68;68H(B[0;7mM-M(B[m Mac Format[68;135H(B[0;7mM-P(B[m Prepend[68;202H(B[0;7m^T(B[m Browse[66d(B[0;7mFile Name to Write: kubeconfig-embedded(B[m[?12l[?25h[?25l[66;127H[1K (B[0;7m[ Writing... ](B[m[K[1;148H(B[0;7m [267G(B[m[66;126H(B[0;7m[ Wrote 32 lines ](B[m[J[68d[?12l[?25h[68;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ nano kubeconfig-embedded[2Pgit push origin mastercommit -m"servcer change"add .[K
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git add .nano kubeconfig-embedded[2Pgit push origin mastercommit -m"servcer change"
+[?2004l[master a50a42e] servcer change
+ 2 files changed, 18 insertions(+), 2 deletions(-)
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git commit -m"servcer change"add .[Knano kubeconfig-embedded[2Pgit push origin master
+[?2004lEnumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 666 bytes | 666.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/3)[Kremote: Resolving deltas:  33% (1/3)[Kremote: Resolving deltas:  66% (2/3)[Kremote: Resolving deltas: 100% (3/3)[Kremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[K
+To https://github.com/aayush5593/testMulti.git
+   57b0eef..a50a42e  master -> master
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cat je 
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cat Jenkinsfile 
+[?2004lpipeline {
+    agent any
+
+    environment {
+        FLASK_IMAGE = "aayushhhsharma/flaskapp"
+        LOGGER_IMAGE = "aayushhhsharma/logger"
+        DB_IMAGE = "aayushhhsharma/db"
+	KUBECONFIG = "${WORKSPACE}/kubeconfig-embedded"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/aayush5593/testMulti.git'
+            }
+        }
+
+        stage('Set Image Tag') {
+            steps {
+                script {
+                    def tag = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    env.IMAGE_TAG = tag
+                    echo "Using IMAGE_TAG: ${env.IMAGE_TAG}"
+                }
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                }
+            }
+        }
+
+        stage('Build and Push Flask Image') {
+            steps {
+                sh "docker build -t ${FLASK_IMAGE}:${IMAGE_TAG} ./Simple-Flask-Calculator"
+                sh "docker push ${FLASK_IMAGE}:${IMAGE_TAG}"
+            }
+        }
+
+        stage('Build and Push Logger Image') {
+            steps {
+                sh "docker build -t ${LOGGER_IMAGE}:${IMAGE_TAG} ./loggerService"
+                sh "docker push ${LOGGER_IMAGE}:${IMAGE_TAG}"
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh '/opt/sonar-scanner/bin/sonar-scanner'
+                }
+            }
+        }
+
+        stage('Update Deployment YAML') {
+            steps {
+                script {
+                    sh """
+                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
+                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
+                    """
+                }
+            }
+        }
+
+        stage('Apply to Kubernetes') {
+            steps {
+                withCredentials([file(credentialsId: 'KubeCtlServer', variable: 'KUBECONFIG')]) {
+                    sh 'ls -l $(dirname $KUBECONFIG)'
+                    sh 'kubectl apply -f deployment.yaml'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            emailext(
+                subject: "✅ Build Success: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """Good news! The build succeeded.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+Check console output at: ${env.BUILD_URL}
+"""
+            )
+        }
+        failure {
+            emailext(
+                subject: "❌ Build Failure: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                body: """Oh no! The build failed.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+Check console output at: ${env.BUILD_URL}
+"""
+            )
+        }
+    }
+}
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cat deployment.yaml 
+[?2004l---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  selector:
+    app: flaskapp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8070
+      targetPort: 8070
+      nodePort: 30007
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+        - name: flaskapp
+          image: aayushhhsharma/flaskapp:${IMAGE_TAG}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8070
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8070
+            initialDelaySeconds: 10
+            periodSeconds: 20
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8070
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logger
+  labels:
+    app: logger
+spec:
+  selector:
+    app: logger
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5001
+      targetPort: 5001
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger
+  labels:
+    app: logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logger
+  template:
+    metadata:
+      labels:
+        app: logger
+    spec:
+      containers:
+        - name: logger
+          image: aayushhhsharma/logger:${IMAGE_TAG}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5001
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 5
+            periodSeconds: 10
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cat kubeconfig-embedded
+[?2004lapiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/krayu/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:27:23 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:27:23 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/krayu/.minikube/profiles/minikube/client.crt
+    client-key: /home/krayu/.minikube/profiles/minikube/client.key
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cd ..
+[?2004l[?2004h]0;krayu@Aayush: ~[01;32mkrayu@Aayush[00m:[01;34m~[00m$ nano [K[K[K[K[Kcd  home
+[?2004lbash: cd: home: No such file or directory
+[?2004h]0;krayu@Aayush: ~[01;32mkrayu@Aayush[00m:[01;34m~[00m$ ls
+[?2004l[0m[01;34mDocker-Zero-to-Hero[0m  a.txt  c.txt  [01;34mdocker[0m           fruits  [01;34mgit_test[0m  kubectl.sha256  [01;34mmoviesvideogame[0m  [01;34mnewLinux[0m  [01;34msnap[0m                            [01;31msonar-scanner-cli-5.0.1.3006-linux.zip[0m  [01;34mtest_doc[0m
+[01;34mPyPractice[0m           b.txt  [01;34mcalc[0m   [01;34mfresh-testMulti[0m  [01;34mgit[0m     kubectl   [01;34mmovie[0m           [01;34mmyenv[0m            [01;34mpython[0m    [01;34msonar-scanner-5.0.1.3006-linux[0m  [01;34mtestPy[0m
+[?2004h]0;krayu@Aayush: ~[01;32mkrayu@Aayush[00m:[01;34m~[00m$ cd .kube
+[?2004l[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ nano config[K[K[K[K[K[K[K[K[K[K[Kls
+[?2004l[0m[01;34mcache[0m  config
+[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ nano config
+[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;126H(B[0;7m[ Read 32 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                       config                                                                                                                                 [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2dapiVersion: v1[3dclusters:[4d- cluster:[5;5Hcertificate-authority: /home/krayu/.minikube/ca.crt[6;5Hextensions:[7;5H- extension:[8;9Hlast-update: Tue, 27 May 2025 20:37:17 UTC[9;9Hprovider: minikube.sigs.k8s.io[10;9Hversion: v1.36.0[11;7Hname: cluster_info[12;5Hserver: [94mhttps://127.0.0.1:32791[13;3H[39m(B[mname: minikube[14dcontexts:[15d- context:[16;5Hcluster: minikube[17;5Hextensions:[18;5H- extension:[19;9Hlast-update: Tue, 27 May 2025 20:37:17 UTC[20;9Hprovider: minikube.sigs.k8s.io[21;9Hversion: v1.36.0[22;7Hname: context_info[23;5Hnamespace: default[24;5Huser: minikube[25;3Hname: minikube[26dcurrent-context: minikube[27dkind: Config[28dpreferences: {}[29dusers:[30d- name: minikube[31;3Huser:[32;5Hclient-certificate: /home/krayu/.minikube/profiles/minikube/client.crt[33;5Hclient-key: /home/krayu/.minikube/profiles/minikube/client.key[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[1;141H(B[0;7m*[267G(B[m[12;66r[66;1H
+[1;68r[65;1H[K[12d[?12l[?25h[?25l7[12;66r8M[1;68r[13;1H[?12l[?25h[?25l[?12l[?25h[A[?25l[66d[12dserver: [94mhttps://192.168.49.2:8443[39m(B[m[?12l[?25h[?25l[66;127H(B[0;7m[ Undid paste ](B[m[12d[K[?12l[?25h[?25l[66;125H(B[0;7m[ Undid line break ](B[m[12;65r[65;1H
+[1;68r[12;1H[?12l[?25h[?25l[66;125H   (B[0;7m[ Undid cut ](B[m[K[1;141H(B[0;7m [267G(B[m[12;65r[12;1HM[1;68r[12;5Hserver: [94mhttps://127.0.0.1:32791[39m(B[m[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25hv[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25h:[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[66d[K[?12l[?25h[12;21H[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;141H(B[0;7m*[267G(B[m[?12l[?25h[12;35H [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h.[K[?25l[?12l[?25h [?25l[?12l[?25h[12;13Hhttps://127.0.[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K    [?25lserver: [94mhttps://192.168.49.2:8443[39m(B[m[?12l[?25h[?25l[66d(B[0;7mSave modified buffer?                                                                                                                                                                                                                                                       [67;1H Y(B[m Yes[K[68d(B[0;7m N(B[m No  [68;17H(B[0;7m^C(B[m Cancel[K[66;23H[?12l[?25h[?25l[67d(B[0;7m^G(B[m Help[67;68H(B[0;7mM-D(B[m DOS Format[67;135H(B[0;7mM-A(B[m Append[67;202H(B[0;7mM-B(B[m Backup File[68d(B[0;7m^C(B[m Cancel[17G         [68;68H(B[0;7mM-M(B[m Mac Format[68;135H(B[0;7mM-P(B[m Prepend[68;202H(B[0;7m^T(B[m Browse[66d(B[0;7mFile Name to Write: config(B[m[?12l[?25h[?25l[66;127H[1K (B[0;7m[ Writing... ](B[m[K[1;141H(B[0;7m [267G(B[m[66;126H(B[0;7m[ Wrote 32 lines ](B[m[J[68d[?12l[?25h[68;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ [7mkubectl config view --raw[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl config view --raw
+[?2004lapiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /home/krayu/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:37:17 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:37:17 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /home/krayu/.minikube/profiles/minikube/client.crt
+    client-key: /home/krayu/.minikube/profiles/minikube/client.key
+[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ [7mcurl https://192.168.49.2:8443[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl https://192.168.49.2:8443
+[?2004lcurl: (60) SSL certificate problem: unable to get local issuer certificate
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ [7mcurl --insecure https://192.168.49.2:8443[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl --insecure https://192.168.49.2:8443
+[?2004l{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {},
+  "status": "Failure",
+  "message": "forbidden: User \"system:anonymous\" cannot get path \"/\"",
+  "reason": "Forbidden",
+  "details": {},
+  "code": 403
+}[?2004h]0;krayu@Aayush: ~/.kube[01;32mkrayu@Aayush[00m:[01;34m~/.kube[00m$ cd ..
+[?2004l[?2004h]0;krayu@Aayush: ~[01;32mkrayu@Aayush[00m:[01;34m~[00m$ cd PyPractice/
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cd PyPractice/..[Kurl --insecure https://192.168.49.2:8443
+[?2004l{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {},
+  "status": "Failure",
+  "message": "forbidden: User \"system:anonymous\" cannot get path \"/\"",
+  "reason": "Forbidden",
+  "details": {},
+  "code": 403
+}[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mminikube kubeconfig --embed-certs > kubeconfig-embedded.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cminikube kubeconfig --embed-certs > kubeconfig-embedded.yaml
+[?2004lError: unknown command "kubeconfig" for "minikube"
+Run 'minikube --help' for usage.
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mminikube kubeconfig --embed-certs > kubeconfig-embedded.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cminikube kubeconfig --embed-certs > kubeconfig-embedded.yaml
+[?2004lError: unknown command "kubeconfig" for "minikube"
+Run 'minikube --help' for usage.
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl config view --minify --flatten --raw > kubeconfig-embedded.yaml
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mcat kubeconfig-embedded.yaml[27mcat kubeconfig-embedded.yaml
+[?2004lapiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCakNDQWU2Z0F3SUJBZ0lCQVRBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1EVXlNVEV4TURFd09Gb1hEVE0xTURVeU1ERXhNREV3T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYldsdWFXdDFZbVZEUVRDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTC9yCktDY2NId2hxaGhWQi9PMkorbmozYmMvVE53S2pGM1FUOUZRVlo3cEsrN29uSnVHL0hUb1Erbi9rc0ltNlJwS1gKMXp0QStPSGxlMHJUQ3BoYkdzL1ZHMFFTbGhFOHdDN2E0ZzhiNHFKSEt4eVlMencyUjZmWmVTdjVSTVlIcmU1bApSVEI2ZVd2ZzIyVHJMQTR6YW1kc0NwM1VybktBb24wd0Yyc1NPMHUrUksyVFEzRVZKWHd2OHQ0MUNzVVpvTUJvCldUYmI2eU93aGpxSzYySXVYYTk0YVBpbXhxd2FMbmpBZXkzWFU2cmU0SWlOeWpNdTg3WUZ2OHlZNWtNR3BFaXoKU1ROK2FTdUp5K0pIbWFOTFJVdlcvOVk3dlh3T3U5WVBzT0RkOTRud3J2M29XUzFLaEpuS1IwR0xBOFFrbHZQVwpkMUFmamRuLy9meDVGOEtubWprQ0F3RUFBYU5oTUY4d0RnWURWUjBQQVFIL0JBUURBZ0trTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUNCZ2dyQmdFRkJRY0RBVEFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVcKQkJSZzlWU29ub1M1K1lDRmtjcUtJRGVwZUhUMTB6QU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFnZHBjTldNbQpuc1ZhSTYzbUIxZFpsZkxrQXpNKzhmeDY5R1llUkRuTDFkUWV3V3I2Q2Fnak1tdmY0VE9wTnlGMFczZ01DUTE4CnZYSUI0L1RDYkdsbVNvN3dGQXdpUjdvbjFObUVLRVFvY3o5eU5JWVNnaHlWUkVzOU5vc1BIb0N4cWV6Mk1OemgKK1RBZm5Pbm5xaWF5bzBVQmxwZ3ArdUdkMUF2Qjdua0w0aERqeHQ2ZWlTbTJ5a09aby91dnlSeHlPWEl2SkpyNgpvR09VQW5tWG9kWG9xOGRFdmtrcmZtZ0xHbkJ4UUxaRnJnSitxWjl2NEF1K25JYllnS29qV01BaFRZSzlyUDBjCk1ZdkFndndlZFUwWmh5VlJhN3F1aDlFUzlnT0MwZDFrRDgvTTVKZ0VvS3J2ZGhZSXNsYWkyOHkxZlYxNC9MRHoKMEEwaW11U21JYWozT0E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:37:17 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: cluster_info
+    server: https://192.168.49.2:8443
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Tue, 27 May 2025 20:37:17 UTC
+        provider: minikube.sigs.k8s.io
+        version: v1.36.0
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURJVENDQWdtZ0F3SUJBZ0lCQWpBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwdGFXNXAKYTNWaVpVTkJNQjRYRFRJMU1EVXlOakl3TXpZMU0xb1hEVEk0TURVeU5qSXdNelkxTTFvd01URVhNQlVHQTFVRQpDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGakFVQmdOVkJBTVREVzFwYm1scmRXSmxMWFZ6WlhJd2dnRWlNQTBHCkNTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDakkzSXZ2Vit1dW5LcXV1SVJITTZONlJGSGJJNU4KY2FPUDZJY29lMlBzOGJUb3FWRU1JczEwdlFHVklvK0p4YS9ROWl1VnpaL3FQV1NIelpWc0RGT0lHdWlYa0VtcAo1ckxJdGJvdUpuUGRHa3FLc3dkOHY0dy82eW1NVVFaR29ic2ExckJRQlgxWkh5TkpvRXVQa0dqcG9oWWtLNXB1CjFHS3oyalorOEdFQXE2czZxZy8xM3ZFRDM0N0ZMRVVkeG1LRzZ4SVF3ZGVoeFZPazcrWElVNFdNeFFiWG1DQlcKMTI5WHZaM1RlREJiaTVveUcwb2RLNUNES3ZvTTNzRndldVNJa2Jvb3I5OUtVWWhjMzBwcDJOdnphWjNCaWtrWAp5L05QeS84allYdXk3OXEycnB3eG9oL0RrY1Ixak9VN25raGRLTTBwNVNMSmdKTDh0UCsxSXR5cEFnTUJBQUdqCllEQmVNQTRHQTFVZER3RUIvd1FFQXdJRm9EQWRCZ05WSFNVRUZqQVVCZ2dyQmdFRkJRY0RBUVlJS3dZQkJRVUgKQXdJd0RBWURWUjBUQVFIL0JBSXdBREFmQmdOVkhTTUVHREFXZ0JSZzlWU29ub1M1K1lDRmtjcUtJRGVwZUhUMQowekFOQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBaExETkVScVIvaWd6S3dQck52cnEyQUdEdEdEVUoya0EzT25pClphYWI1S2E5aXI1aWRqWFh6WjZhcmFBWUxCcGk4Q0dJMkFOWitXN1JBMVFiQm9MNWdxL1NlSjFka0hXUE5zUzUKZEkwU05oOFpFMmxQNWpibk1wekZFNVV4MXlBU0NVb2E4RU9SOU1MTkdFdUlzdzlFcThwaWtKVzVJdGVDWWxjMwpGUktMckRHakhIdWdDblc2cnF1YklKRG1nR3ZONVg4WnVGdFBIV29IWVgxWXBvTW1ld3FpdlB6ZEE5Tk5wUFJNClNWZXpDd0hnaUlzQUN3VVAybmNJZ3lCOHNzMFJIVVdxbjdjL3ZJdWY5VDBYK1djclVkQndQRUw1dmFBTjkrVjAKS1pMUkxXSUtDYXpwOXdzdTAzWG5KVkRHa01BS3VKOXEvR2dQY2xOb1dDSzUvdmFEdlE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBb3lOeUw3MWZycnB5cXJyaUVSek9qZWtSUjJ5T1RYR2pqK2lIS0h0ajdQRzA2S2xSCkRDTE5kTDBCbFNLUGljV3YwUFlybGMyZjZqMWtoODJWYkF4VGlCcm9sNUJKcWVheXlMVzZMaVp6M1JwS2lyTUgKZkwrTVArc3BqRkVHUnFHN0d0YXdVQVY5V1I4alNhQkxqNUJvNmFJV0pDdWFidFJpczlvMmZ2QmhBS3VyT3FvUAo5ZDd4QTkrT3hTeEZIY1ppaHVzU0VNSFhvY1ZUcE8vbHlGT0ZqTVVHMTVnZ1Z0ZHZWNzJkMDNnd1c0dWFNaHRLCkhTdVFneXI2RE43QmNIcmtpSkc2S0svZlNsR0lYTjlLYWRqYjgybWR3WXBKRjh2elQ4di9JMkY3c3UvYXRxNmMKTWFJZnc1SEVkWXpsTzU1SVhTak5LZVVpeVlDUy9MVC90U0xjcVFJREFRQUJBb0lCQUFjb0NsTUtUTHpQNXpEOQpURHYzRzhveFluQStsSnAvUk84ajdVUHJHbkI5NU9pbmxDRFlhUDRPbEMwY051MlNzTHBWc052eGlTcnFkbDNDClkyUTU2OTNSWFFrdHRrYmYvTkZJV1lwbDVrTnUxYnpIdFpQS2NsR3BLYW1EQjJlelRMb3FGMUlYVk9SRE5RRFQKNlk5UUdpNFU0eGJ0OFJNY3VZSU5iVUpuSGV1UnlsejY4V1hMZ3V2NmtaajkxMGZqQ3BudW9RZWFjZDBYdUZmWApJbWZlTVQzNWFDMlZCV1E3NDBYTDlwdis5Z2ZYZE5KTTk2MTRNSXV1MzJ1eUVmS21yOVdOZUUrZ0NoMkdpTytzCmErZkxLdnZzZU1TbWNVTS9sM1Bhb0xJMTd4QkZSRzhJeStBY0pYS21mT1A5Z1ZYZTh6Zjh0bjlQYTI2Z1RrNmYKaWVESGZlVUNnWUVBMEhJOVVJZHJuM2JkUm5jQjVudnBkaFdTTGMvSThzU2w1SmdGa3hrRkR6V2drNE55a1lWTwo4aUQrNXdLTzFlYnVGbnFPa0h5TGNmUzY1V09CZDRJVGdGVEJCekxxbDcvdGV6WGxIakR0anJvb09pc1VuTXJCCm8rMUZDeDMybytBOTRXZzNCaXN2YWJ2Zno2RGlablQrblRPWjl6bm1WR3BCSzErTnZEbDFRZDBDZ1lFQXlGc2YKaUpDNEVvOGNHVmZQYWg4R2o2VHZzN0lTQjdxNHBwS2MwTy9peGdXVDZHTmMvN0xpUk91WlNUbnJsYVRxb1BRQwpMY1Y1QVNrSGIxZHJxL3NnSG1mMFRNazdNUzhxSTBMNjVKYUFBWkErRmF0RFNjVHlRNzFSTzFFaHpRWFlUKyt4CnVBakd0TDMrTkxHTDdrdDZMZjNPS2VYLytNcC9Ud09JY1VMM3B6MENnWUVBcTU1RENUaFZ6YmNKdStoanNpWTMKTXpmVFlOQ0F2QkJZSFh0a3E1V2Y2c1BXYjExOFNIK2ZYZzc0ajY0MWQ3dG9MeTI4ancxYnFmazZuMzVycTc5MgoydVB0QVVaVWk1aERxSHZaSmlCV2xucUNnRkhUNkx1dTdvNTltQWVWZDVzNmw0azhOR0g5NlduN2ZYRVN0aFNCClJXQ2sxVDNnZTRQNElBUE9LRGlPYUNrQ2dZRUF0VFdGWGJUV1p5SzhYVWVJTndqOG5DcW5DYldDalM4YUZyMy8KeXhGTDM2SG4xb1VYOWNSSzFkN29jc3hLQUx4NTRUMFFRMm1aT2Exc0pnM0JPbmtVNGF0UHo2c3BPQ0RhVWE0ZwowV0kxUURTL2trV2x4REMybFFIRFdJeldyMkliOUtCcjhuRXRsd2RIeFV6WHJKempVbmw5WDNQQWdicFVUcGg1CmJVY09TbGtDZ1lBMVpJSWtUWE5hVzdvd0o4N25NL2RTaFJhcEE5cit6QWNKOXY1ZzVMaC95RGZlL1hhbDFkd2YKbzhBeFc5cUNDUUVSSElFUHBXT2hCRXVPajV1NnBkUWxPakNaTE15anFPUzZmb2I3SFlldCtGWFlrMXFKWlRwYwozdGRVOG5JVkhzVUo3dVhob3BRSk9MMUZoM0QrNllwd09ZUUNER1pwaGp2cStRSmJ6dEFwOVE9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git status
+[?2004lOn branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what
