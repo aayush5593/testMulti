@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_TAG = ''
         FLASK_IMAGE = "aayushhhsharma/flaskapp"
         LOGGER_IMAGE = "aayushhhsharma/logger"
         DB_IMAGE = "aayushhhsharma/db"
@@ -18,8 +17,8 @@ pipeline {
         stage('Set Image Tag') {
             steps {
                 script {
-                    // Set IMAGE_TAG in env so it can be used in all steps
-                    env.IMAGE_TAG = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    def tag = sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
+                    env.IMAGE_TAG = tag
                     echo "Using IMAGE_TAG: ${env.IMAGE_TAG}"
                 }
             }
@@ -58,7 +57,6 @@ pipeline {
         stage('Update Deployment YAML') {
             steps {
                 script {
-                    // Replace image tags in deployment.yaml with the new IMAGE_TAG
                     sh """
                     sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
                     sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
