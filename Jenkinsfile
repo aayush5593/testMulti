@@ -35,15 +35,15 @@ pipeline {
 
         stage('Build and Push Flask Image') {
             steps {
-                sh "docker build -t ${FLASK_IMAGE}:${env.IMAGE_TAG} ./Simple-Flask-Calculator"
-                sh "docker push ${FLASK_IMAGE}:${env.IMAGE_TAG}"
+                sh "docker build -t ${FLASK_IMAGE}:${IMAGE_TAG} ./Simple-Flask-Calculator"
+                sh "docker push ${FLASK_IMAGE}:${IMAGE_TAG}"
             }
         }
 
         stage('Build and Push Logger Image') {
             steps {
-                sh "docker build -t ${LOGGER_IMAGE}:${env.IMAGE_TAG} ./loggerService"
-                sh "docker push ${LOGGER_IMAGE}:${env.IMAGE_TAG}"
+                sh "docker build -t ${LOGGER_IMAGE}:${IMAGE_TAG} ./loggerService"
+                sh "docker push ${LOGGER_IMAGE}:${IMAGE_TAG}"
             }
         }
 
