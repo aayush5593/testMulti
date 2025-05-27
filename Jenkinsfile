@@ -60,8 +60,8 @@ pipeline {
                 script {
                     // Replace image tags in deployment.yaml with the new IMAGE_TAG
                     sh """
-                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${env.IMAGE_TAG}|' deployment.yaml
-                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${env.IMAGE_TAG}|' deployment.yaml
+                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
+                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
                     """
                 }
             }
