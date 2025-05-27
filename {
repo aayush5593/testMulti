@@ -6414,4 +6414,350 @@ users:
 [?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git status
 [?2004lOn branch master
 Changes not staged for commit:
-  (use "git add <file>..." to update what
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   kubeconfig-embedded.yaml[m
+	[31mmodified:   {[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git add .
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git commit -,[Km"cert"
+[?2004l[master 2b3954d] cert
+ 2 files changed, 396 insertions(+), 6 deletions(-)
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ git push origin master
+[?2004lEnumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 9.69 KiB | 709.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/aayush5593/testMulti.git
+   a50a42e..2b3954d  master -> master
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ kubectl get pods
+[?2004lNAME                       READY   STATUS    RESTARTS   AGE
+flaskapp-58d4d5b94-794b6   0/1     Running   0          36s
+flaskapp-58d4d5b94-bhbdn   0/1     Running   0          36s
+logger-845d8f46fb-qvz6g    0/1     Running   0          36s
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mminikube addons enable metrics-server[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cminikube addons enable metrics-server
+[?2004l💡  metrics-server is an addon maintained by Kubernetes. For any concerns contact minikube on GitHub.
+You can view the list of minikube maintainers at: https://github.com/kubernetes/minikube/blob/master/OWNERS
+    ▪ Using image registry.k8s.io/metrics-server/metrics-server:v0.7.2
+🌟  The 'metrics-server' addon is enabled
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl get deployment metrics-server -n kube-system[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl get deployment metrics-server -n kube-system
+[?2004lNAME             READY   UP-TO-DATE   AVAILABLE   AGE
+metrics-server   0/1     1            0           14s
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl autoscale deployment flask-calculator --cpu-percent=50 --min=1 --max=5[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl autoscale deployment flask-calculator --cpu-percent=50 --min=1 --max=5
+[?2004lError from server (NotFound): deployments.apps "flask-calculator" not found
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cat deployment.yaml 
+[?2004l---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  selector:
+    app: flaskapp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8070
+      targetPort: 8070
+      nodePort: 30007
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+        - name: flaskapp
+          image: aayushhhsharma/flaskapp:${IMAGE_TAG}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8070
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8070
+            initialDelaySeconds: 10
+            periodSeconds: 20
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8070
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logger
+  labels:
+    app: logger
+spec:
+  selector:
+    app: logger
+  ports:
+    - name: http
+      protocol: TCP
+      port: 5001
+      targetPort: 5001
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger
+  labels:
+    app: logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: logger
+  template:
+    metadata:
+      labels:
+        app: logger
+    spec:
+      containers:
+        - name: logger
+          image: aayushhhsharma/logger:${IMAGE_TAG}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5001
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 5001
+            initialDelaySeconds: 5
+            periodSeconds: 10
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  selector:
+    app: flaskapp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8070
+      targetPort: 8070
+      nodePort: 30007
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp
+  labels:
+    app: flaskapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+        - name: flaskapp
+          image: aayushhhsharma/flaskapp:${IMAGE_TAG}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8070
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "1"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+[7m              port: 8070[27m
+[7m            initialDelaySeconds: 10[27m
+[7m            periodSeconds: 20[27m
+[7m            failureThreshold: 3[27m
+[7m          readinessProbe:[27m
+[7m            httpGet:[27m
+[7m              path: /[27m
+[7m              port: 8070[27m
+[7m            initialDelaySeconds: 5[27m
+[7m            periodSeconds: 10[27m
+[7m---[27m
+[7mapiVersion: v1[27m
+[7mkind: Service[27m
+[7mmetadata:[27m
+[7m  name: logger[27m
+[7m  labels:[27m
+[7m    app: logger[27m
+[7mspec:[27m
+[7m  selector:[27m[7m    app: logger[27m[7m  ports:[27m[7m    - name: http[27m[7m      protocol: TCP[27m[7m      port: 5001[27m[7m      targetPort: 5001[27m[7m  type: ClusterIP[27m[7m---[27m[7mapiVersion: apps/v1[27m[7mkind: Deployment[27m[7mmetadata:[27m[7m  name: logger[27m[7m  labels:[27m[7m    app: logger[27m[7mspec:[27m[7m  replicas: 1[27m[7m  selector:[27m[7m    matchLabels:[27m[7m      app: logger[27m[7m  template:[27m[7m    metadata:[27m[7m      labels:[27m[7m        app: logger[27m[7m    spec:[27m[7m      containers:[27m[7m        - name: logger[27m[7m          image: aayushhhsharma/logger:${IMAGE_TAG}[27m[7m          imagePullPolicy: Always[27m[7m          ports:[27m[7m            - containerPort: 5001[27m[7m          resources:[27m[7m            requests:[27m[7m              cpu: "100m"[27m[7m              memory: "256Mi"[27m[7m            limits:[27m[7m              cpu: "500m"[27m[7m              memory: "256Mi"[27m[7m          livenessProbe:[27m[7m            httpGet:[27m[7m              path: /[27m[7m              port: 5001[27m[7m            initialDelaySeconds: 10[27m[7m            periodSeconds: 20[27m[7m          readinessProbe:[27m[7m            httpGet:[27m[7m              path: /[27m[7m              port: 5001[27m[7m            initialDelaySeconds: 5[27m[7m            periodSeconds: 10[27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2J]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl autoscale deployment flaskapp --cpu-percent=50 --min=1 --max=5[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl autoscale deployment flaskapp --cpu-percent=50 --min=1 --max=5
+[?2004lhorizontalpodautoscaler.autoscaling/flaskapp autoscaled
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl get deployments[27mkubectl get deployments
+[?2004lNAME       READY   UP-TO-DATE   AVAILABLE   AGE
+flaskapp   2/2     2            2           3m58s
+logger     0/1     1            0           3m56s
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ [7mkubectl logs deployment/logger[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl logs deployment/logger
+[?2004l * Serving Flask app 'logger'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://10.244.0.5:5001
+[33mPress CTRL+C to quit[0m
+10.244.0.1 - - [27/May/2025 21:14:31] "[33mGET / HTTP/1.1[0m" 404 -
+10.244.0.1 - - [27/May/2025 21:14:41] "[33mGET / HTTP/1.1[0m" 404 -
+10.244.0.1 - - [27/May/2025 21:14:46] "[33mGET / HTTP/1.1[0m" 404 -
+10.244.0.1 - - [27/May/2025 21:14:51] "[33mGET / HTTP/1.1[0m" 404 -
+10.244.0.1 - - [27/May/2025 21:15:01] "[33mGET / HTTP/1.1[0m" 404 -
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ ls\[K
+[?2004l Jenkinsfile   README.md   [0m[01;34mSimple-Flask-Calculator[0m   deployment.yaml   docker-compose.yaml   je   kubeconfig-embedded   kubeconfig-embedded.yaml   [01;34mloggerService[0m   [01;32mminikube-linux-amd64[0m   sonar-project.properties  '{'
+[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ cd loggerService/
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService[00m$ ls
+[?2004lDockerfile  [0m[01;34mapp[0m
+[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService[00m$ tree
+[?2004l[01;34m.[0m
+├── Dockerfile
+└── [01;34mapp[0m
+    ├── logger.py
+    └── requirements.txt
+
+2 directories, 3 files
+[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService[00m$ cat Dockerfile 
+[?2004lFROM python:3.12-slim
+
+WORKDIR /app
+
+COPY app/requirements.txt ./app/requirements.txt
+
+RUN pip install --no-cache-dir -r app/requirements.txt
+
+COPY app/ ./app/
+
+CMD ["python", "app/logger.py"]
+
+[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService[00m$ cd ..
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ \[Knano fl[K[K[K[K[K[K[Kcd Simple-Flask-Calculator/
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/Simple-Flask-Calculator[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/Simple-Flask-Calculator[00m$ nano app.py 
+[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;126H(B[0;7m[ Read 49 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                       app.py                                                                                                                                 [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2d(B[0;1m[36mfrom[39m(B[m flask (B[0;1m[36mimport[39m(B[m Flask, render_template, request[3d(B[0;1m[36mfrom[39m(B[m flask_sqlalchemy (B[0;1m[36mimport[39m(B[m SQLAlchemy[4d(B[0;1m[36mimport[39m(B[m datetime[6d(B[0;1m[31m# Initialize Flask app and configure DB[7d[39m(B[mapp = Flask(__name__, template_folder=(B[0;1m[32m'Templates'[39m(B[m)[8dapp.config[(B[0;1m[32m'SQLALCHEMY_DATABASE_URI'[39m(B[m] = (B[0;1m[32m'postgresql://postgres:1234@db:5432/logsdb'[9d[39m(B[mdb = SQLAlchemy(app)[11d(B[0;1m[31m# Route for the calculator home page[12d[39m(B[m@app.route((B[0;1m[32m'/'[39m(B[m)[13d(B[0;1m[36mdef[34m index[39m(B[m():[14;5H(B[0;1m[36mreturn[39m(B[m render_template((B[0;1m[32m'CalcFront.html'[39m(B[m)[16d(B[0;1m[31m# Log model to store calculation logs[17d[36mclass[39m(B[m Log(db.Model):[18;5Hid = db.Column(db.Integer, primary_key=(B[0;1m[35mTrue[39m(B[m)[19;5Htimestamp = db.Column(db.String, nullable=(B[0;1m[35mFalse[39m(B[m)[20;5Hdata = db.Column(db.Text, nullable=(B[0;1m[35mFalse[39m(B[m)[22d(B[0;1m[31m# Route to perform calculation[23d[39m(B[m@app.route((B[0;1m[32m'/Calculating'[39m(B[m, methods=[(B[0;1m[32m'POST'[39m(B[m])[24d(B[0;1m[36mdef[34m Calculating[39m(B[m():[25;5Hnumber1 = float(request.form[(B[0;1m[32m'num1'[39m(B[m])[26;5Hnumber2 = float(request.form[(B[0;1m[32m'num2'[39m(B[m])[27;5Hoperation = request.form[(B[0;1m[32m'operation'[39m(B[m][29;5H(B[0;1m[36mif[39m(B[m operation == (B[0;1m[32m'add'[39m(B[m:[30;9Hresult = number1 + number2[31;5H(B[0;1m[36melif[39m(B[m operation == (B[0;1m[32m'subtract'[39m(B[m:[32;9Hresult = number1 - number2[33;5H(B[0;1m[36melif[39m(B[m operation == (B[0;1m[32m'multiply'[39m(B[m:[34;9Hresult = number1 * number2[35;5H(B[0;1m[36melif[39m(B[m operation == (B[0;1m[32m'divide'[39m(B[m:[36;9Hresult = number1 / number2[37;5H(B[0;1m[36melse[39m(B[m:[38dresult = (B[0;1m[32m"Invalid operation"[40;4H[31m # Log the operation[41;5H[39m(B[mtimestamp = datetime.datetime.now().isoformat()[42;5Hlog_entry = Log(timestamp=timestamp, data=f(B[0;1m[32m"Operation: {operation}, Num1: {number1}, Num2: {number2}, Result: {result}"[39m(B[m)[43;5Hdb.session.add(log_entry)[44;5Hdb.session.commit()[46;5H(B[0;1m[36mreturn[39m(B[m render_template((B[0;1m[32m'CalcFront.html'[39m(B[m, result=result)[48d(B[0;1m[31m# Run the Flask app[49d[36mif[39m(B[m __name__ == (B[0;1m[32m'__main__'[39m(B[m:[50;5Happ.run(host=(B[0;1m[32m'0.0.0.0'[39m(B[m, port=8070)[2d[?12l[?25h[?25l[66d[J[68d[?12l[?25h[68;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/Simple-Flask-Calculator[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/Simple-Flask-Calculator[00m$ cd ..
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice[00m$ \cd loggerService/
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService[00m$ nano[K[K[K[Kcd app/
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService/app[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService/app[00m$ nano ap[K[K[K[K[K[K[Kls
+[?2004llogger.py  requirements.txt
+[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService/app[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService/app[00m$ nano logger.py 
+[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;126H(B[0;7m[ Read 19 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                      logger.py                                                                                                                               [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2d(B[0;1m[36mfrom[39m(B[m flask (B[0;1m[36mimport[39m(B[m Flask, request, jsonify[3d(B[0;1m[36mimport[39m(B[m datetime[5dapp = Flask(__name__)[7d@app.route((B[0;1m[32m'/log'[39m(B[m, methods=[(B[0;1m[32m'POST'[39m(B[m])[8d(B[0;1m[36mdef[34m log_data[39m(B[m():[9;5Hdata = request.get_json()[10;5Htimestamp = datetime.datetime.now().isoformat()[11;5Hlog_line = f(B[0;1m[32m"[{timestamp}] {data}(B[0m[38;5;148m\n(B[0;1m[32m"[12d(B[0m[42m    [13d(B[0;1m[31m # Save to file[14;5H[36mwith[39m(B[m open((B[0;1m[32m"logs.txt"[39m(B[m, (B[0;1m[32m"a"[39m(B[m) (B[0;1m[36mas[39m(B[m log_file:[15;9Hlog_file.write(log_line)[16d[42m    [17d(B[0;1m[36mreturn[39m(B[m jsonify({(B[0;1m[32m"status"[39m(B[m: (B[0;1m[32m"logged"[39m(B[m, (B[0;1m[32m"data"[39m(B[m: data}), 200[19d(B[0;1m[36mif[39m(B[m __name__ == (B[0;1m[32m"__main__"[39m(B[m:[20;5Happ.run(host=(B[0;1m[32m"0.0.0.0"[39m(B[m, port=5001)[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[A[?25l[66d[J[68d[?12l[?25h[68;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService/app[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService/app[00m$ > ap[K[Klogger.py 
+[?2004l[?2004h]0;krayu@Aayush: ~/PyPractice/loggerService/app[01;32mkrayu@Aayush[00m:[01;34m~/PyPractice/loggerService/app[00m$ nano logger.py 
+[?2004l[?2004h[?1049h[22;0;0t[1;68r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[66;128H(B[0;7m[ Reading... ](B[m[66;127H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                                                                                      logger.py                                                                                                                               [1;267H(B[m[67d(B[0;7m^G(B[m Help[67;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[67;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[67;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[67;188H(B[0;7m^◂(B[m Prev Word     (B[0;7m^A(B[m Home[67;222H(B[0;7m^P(B[m Prev Line     (B[0;7mM-▴(B[m Scroll Up[68d(B[0;7m^X(B[m Exit[68;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[68;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[68;120H(B[0;7mM-6(B[m Copy[68;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[68;171H(B[0;7m^F(B[m Forward[188G(B[0;7m^▸(B[m Next Word     (B[0;7m^E(B[m End[68;222H(B[0;7m^N(B[m Next Line     (B[0;7mM-▾(B[m Scroll Down[2d[?12l[?25h[?25l[66d[K[1;143H(B[0;7m*[267G(B[m[2d(B[0;1m[36mfrom[39m(B[m flask (B[0;1m[36mimport[39m(B[m Flask, request, jsonify[3d(B[0;1m[36mimport[39m(B[m datetime[5dapp = Flask(__name__)[7d@app.route((B[0;1m[32m'/'[39m(B[m, methods=[(B[0;1m[32m'GET'[39m(B[m])[8d(B[0;1m[36mdef[34m home[39m(B[m():[9;5H(B[0;1m[36mreturn[39m(B[m (B[0;1m[32m"Logger service is running"[39m(B[m, 200[11d@app.route((B[0;1m[32m'/log'[39m(B[m, methods=[(B[0;1m[32m'POST'[39m(B[m])[12d(B[0;1m[36mdef[34m log_data[39m(B[m():[13;5Hdata = request.get_json()[14;5Htimestamp = datetime.datetime.now().isoformat()[15;5Hlog_line = f(B[0;1m[32m"[{timestamp}] {data}(B[0m[38;5;148m\n(B[0;1m[32m"[17;4H[31m # Save to file[18;5H[36mwith[39m(B[m open((B[0;1m[32m"logs.txt"[39m(B[m, (B[0;1m[32m"a"[39m(B[m) (B[0;1m[36mas[39m(B[m log_file:[19;9Hlog_file.write(log_line)[21;5H(B[0;1m[36mreturn[39m(B[m jsonify({(B[0;1m[32m"status"[39m(B[m: (B[0;1m[32m"logged"[39m(B[m, (B[0;1m[32m"data"[39m(B[m: data}), 200[23d(B[0;1m[36mif[39m(B[m __name__ == (B[0;1m[32m"__main__"[39m(B[m:[24;5Happ.run(host=(B[0;1m[32m"0.0.0.0"[39m(B[m, port=5001)[25d[?12l[?25h[?25l[66d(B[0;7mSave modified buffer?                                                                                                                                                             
