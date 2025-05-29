@@ -59,8 +59,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' deployment.yaml
-                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' deployment.yaml
+                    sed -i 's|image: aayushhhsharma/flaskapp:.*|image: ${FLASK_IMAGE}:${IMAGE_TAG}|' k8s/deployment.yaml
+                    sed -i 's|image: aayushhhsharma/logger:.*|image: ${LOGGER_IMAGE}:${IMAGE_TAG}|' k8s/deployment.yaml
                     """
                 }
             }
@@ -70,7 +70,7 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'KubeCtlServer', variable: 'KUBECONFIG')]) {
                     sh 'ls -l $(dirname $KUBECONFIG)'
-                    sh 'kubectl apply -f deployment.yaml'
+                    sh 'kubectl apply -f k8s/'
                 }
             }
         }

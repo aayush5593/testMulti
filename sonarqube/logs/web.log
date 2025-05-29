@@ -1,0 +1,734 @@
+2025.05.28 18:21:35 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+2025.05.28 18:21:35 INFO  web[][o.s.s.a.TomcatHttpConnectorFactory] Starting Tomcat on port 9000
+2025.05.28 18:21:38 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 10.3.0.82913 / 6f8a6d03ea2dd721d4727be508574d541381d0a1
+2025.05.28 18:21:39 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2025.05.28 18:21:39 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /home/krayu/PyPractice/sonarqube/data
+2025.05.28 18:21:39 INFO  web[][o.s.d.DefaultDatabase] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2025.05.28 18:21:39 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2025.05.28 18:21:39 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2025.05.28 18:21:39 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2025.05.28 18:21:39 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2025.05.28 18:21:45 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /home/krayu/PyPractice/sonarqube
+2025.05.28 18:21:45 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2025.05.28 18:21:46 INFO  web[][o.s.s.p.d.m.h.MigrationHistoryTableImpl] Creating table schema_migrations
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Clean as You Code / 2.2.2.656 / a856086cd01263bf020d3a6aa62763cb76b74120
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection for Code Quality and Security / 1.3.0.654 / 63073f0270b2c4754afa58eb8b5ea04e2eebf1a4
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.12.0.4568 / e8b2821a05db57b79b8ae85e3db1571f5b744273
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.11.0.4708 / bbdf3696bc5c1964fa6e78171910f522f2206642
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.22.0.7057 / 24f70fff5c9e8b2ccdbae2067be30f1e89da3b35
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.3.0.1538 / 74a7798c7cea687c72ed9df40c93eb7ea2a58c49
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.27.1.33504 / fa8668548d47fc0fd7141a99c396bf4c92f8ed88
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 10.9.0.24449 / 11173bb4d804f5ee11817c30ab5cab080dd32170
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.18.0.2938 / f4087142b64b83c72808f8e0adb74ecec4717ba0
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.33.0.11274 / 89583886fa2f4951991f0550938d64572117fd0c
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 4.10.0.13725 / cbda7304ea2baf4ab491777866ee7247a741f910
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.15.0.4655 / 28938525c4093d5e9fa4e858535bbcb60af7f066
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text Code Quality and Security / 2.7.1.1388 / null
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 9.13.0.79967 / 0b84a168e0d212178722ac9865627046c515b212
+2025.05.28 18:21:47 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.10.0.4108 / 34b16ba369117f6befc0b1e0866a069a80f6db2e
+2025.05.28 18:21:55 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2025.05.28 18:21:57 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+2025.05.28 18:21:57 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+2025.05.28 18:21:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+2025.05.28 18:21:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.AutoDbMigration] Automatically perform DB migration on fresh install
+2025.05.28 18:21:56 INFO  web[][DbMigrations] Executing DB migrations...
+2025.05.28 18:21:56 INFO  web[][DbMigrations] #1 'Create initial schema'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #1 'Create initial schema': success | time=689ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #2 'Populate initial schema'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #2 'Populate initial schema': success | time=93ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100000 'Remove orphan rules in Quality Profiles'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100000 'Remove orphan rules in Quality Profiles': success | time=35ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100001 'Drop index 'projects_module_uuid' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100001 'Drop index 'projects_module_uuid' in the 'Components' table': success | time=15ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100002 'Drop column 'module_uuid' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100002 'Drop column 'module_uuid' in the 'Components' table': success | time=42ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100003 'Drop column 'module_uuid_path' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100003 'Drop column 'module_uuid_path' in the 'Components' table': success | time=49ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100004 'Drop column 'b_module_uuid' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100004 'Drop column 'b_module_uuid' in the 'Components' table': success | time=23ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100005 'Drop column 'b_module_uuid_path' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100005 'Drop column 'b_module_uuid_path' in the 'Components' table': success | time=34ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100006 'Drop index 'projects_root_uuid' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100006 'Drop index 'projects_root_uuid' in the 'Components' table': success | time=33ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100007 'Drop column 'root_uuid' in the 'Components' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100007 'Drop column 'root_uuid' in the 'Components' table': success | time=15ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100008 'Update value of 'user_local' in the 'users' table'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100008 'Update value of 'user_local' in the 'users' table': success | time=24ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100009 'Make column 'user_local' not nullable in the 'users' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100009 'Make column 'user_local' not nullable in the 'users' table': success | time=21ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100010 'Create 'scim_groups' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100010 'Create 'scim_groups' table': success | time=3ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100011 'Create unique index on scim_groups.group_uuid'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100011 'Create unique index on scim_groups.group_uuid': success | time=2ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100012 'Log a warning message if 'sonar.scim.enabled' is used'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100012 'Log a warning message if 'sonar.scim.enabled' is used': success | time=4ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100013 'Drop 'sonar.scim.enabled' property'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100013 'Drop 'sonar.scim.enabled' property': success | time=2ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100014 'Drop any SCIM User provisioning, turning all users local'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100014 'Drop any SCIM User provisioning, turning all users local': success | time=2ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100015 'Add ncloc to 'Projects' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100015 'Add ncloc to 'Projects' table': success | time=18ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100016 'Populate ncloc in 'Projects' table'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #100016 'Populate ncloc in 'Projects' table': success | time=15ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101000 'Add 'scm_accounts' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101000 'Add 'scm_accounts' table': success | time=3ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101001 'Migrate scm accounts from 'users' to 'scm_accounts' table'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassRowSplitter] 1 rows processed (0 items/sec)
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101001 'Migrate scm accounts from 'users' to 'scm_accounts' table': success | time=43ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101002 'Add index on 'scm_accounts.scm_account''...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101002 'Add index on 'scm_accounts.scm_account'': success | time=5ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101003 'Add index on 'users.email''...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101003 'Add index on 'users.email'': success | time=5ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101004 'Drop 'scm_accounts' column in 'users' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101004 'Drop 'scm_accounts' column in 'users' table': success | time=37ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101005 'Add column 'is_main' to 'project_branches' table'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101005 'Add column 'is_main' to 'project_branches' table': success | time=29ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101006 'Update value of 'is_main' in 'project_branches' table'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101006 'Update value of 'is_main' in 'project_branches' table': success | time=31ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101007 'Alter column 'is_main' in 'project_branches' table - make it not nullable'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101007 'Alter column 'is_main' in 'project_branches' table - make it not nullable': success | time=19ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101008 'Increase size of 'internal_properties.kee' from 20 to 40 characters'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101008 'Increase size of 'internal_properties.kee' from 20 to 40 characters': success | time=15ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101009 'Create column 'project_uuid' in 'user_tokens'...
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101009 'Create column 'project_uuid' in 'user_tokens': success | time=10ms
+2025.05.28 18:21:57 INFO  web[][DbMigrations] #101010 'Remove user tokens linked to unexistent project'...
+2025.05.28 18:21:57 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101010 'Remove user tokens linked to unexistent project': success | time=12ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101011 'Populate 'project_key' in 'user_tokens''...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101011 'Populate 'project_key' in 'user_tokens'': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101012 'Drop column 'project_key' in 'user_tokens'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101012 'Drop column 'project_key' in 'user_tokens': success | time=24ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101013 'Increase size of 'ce_queue.task_type' from 15 to 40 characters'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101013 'Increase size of 'ce_queue.task_type' from 15 to 40 characters': success | time=3ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101014 'Increase size of 'ce_activity.task_type' from 15 to 40 characters'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101014 'Increase size of 'ce_activity.task_type' from 15 to 40 characters': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101015 'Add 'external_groups' table.'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101015 'Add 'external_groups' table.': success | time=13ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101016 'Add index on 'external_groups(external_identity_provider, external_id).'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101016 'Add index on 'external_groups(external_identity_provider, external_id).': success | time=5ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101017 'Add 'code_variants' column in 'issues' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101017 'Add 'code_variants' column in 'issues' table': success | time=25ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101018 'Fix different uuids for subportfolios'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101018 'Fix different uuids for subportfolios': success | time=11ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101019 'Add report_schedules table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101019 'Add report_schedules table': success | time=6ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101020 'Add report_subscriptions table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101020 'Add report_subscriptions table': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101021 'Add report_schedules unique index'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101021 'Add report_schedules unique index': success | time=6ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101022 'Add report_subscriptions unique index'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101022 'Add report_subscriptions unique index': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101023 'Rename column 'component_uuid' to 'entity_uuid' in the 'properties' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101023 'Rename column 'component_uuid' to 'entity_uuid' in the 'properties' table': success | time=24ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101024 'Populate report_schedules table'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101024 'Populate report_schedules table': success | time=10ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101025 'Populate report_subscriptions table'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101025 'Populate report_subscriptions table': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101026 'Remove report properties'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #101026 'Remove report properties': success | time=8ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102000 'Rename 'component_uuid' in 'user_roles' table to 'entity_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102000 'Rename 'component_uuid' in 'user_roles' table to 'entity_uuid'': success | time=3ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102001 'Rename 'component_uuid' in 'group_roles' table to 'entity_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102001 'Rename 'component_uuid' in 'group_roles' table to 'entity_uuid'': success | time=3ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102002 'Drop index 'group_roles_component_uuid' in 'group_roles''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102002 'Drop index 'group_roles_component_uuid' in 'group_roles'': success | time=2ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102003 'Create index 'entity_uuid_user_roles' in 'group_roles' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102003 'Create index 'entity_uuid_user_roles' in 'group_roles' table': success | time=16ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102004 'Drop index 'user_roles_component_uuid' in 'user_roles' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102004 'Drop index 'user_roles_component_uuid' in 'user_roles' table': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102005 'Create index 'user_roles_entity_uuid' in 'user_roles''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102005 'Create index 'user_roles_entity_uuid' in 'user_roles'': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102006 'Drop index 'ce_activity_component' in 'ce_activity''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102006 'Drop index 'ce_activity_component' in 'ce_activity'': success | time=2ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102007 'Rename 'main_component_uuid' in 'ce_activity' table to 'entity_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102007 'Rename 'main_component_uuid' in 'ce_activity' table to 'entity_uuid'': success | time=5ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102008 'Create index 'ce_activity_entity_uuid' in 'ce_activity' table''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102008 'Create index 'ce_activity_entity_uuid' in 'ce_activity' table'': success | time=6ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102009 'Drop index 'ce_queue_main_component' in 'ce_queue' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102009 'Drop index 'ce_queue_main_component' in 'ce_queue' table': success | time=2ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102010 'Rename 'main_component_uuid' in 'ce_queue' table to 'entity_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102010 'Rename 'main_component_uuid' in 'ce_queue' table to 'entity_uuid'': success | time=12ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102011 'Create index 'ce_queue_entity_uuid' in 'ce_queue' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102011 'Create index 'ce_queue_entity_uuid' in 'ce_queue' table': success | time=1ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102012 'Drop 'project_mappings' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102012 'Drop 'project_mappings' table': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102013 'Drop index on 'components.main_branch_project_uuid'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102013 'Drop index on 'components.main_branch_project_uuid': success | time=1ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102014 'Drop column 'main_branch_project_uuid' in the components table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102014 'Drop column 'main_branch_project_uuid' in the components table': success | time=11ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102015 'Drop index 'component_uuid' in 'webhook_deliveries' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102015 'Drop index 'component_uuid' in 'webhook_deliveries' table': success | time=12ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102016 'Rename 'component_uuid' in 'webhook_deliveries' table to 'project_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102016 'Rename 'component_uuid' in 'webhook_deliveries' table to 'project_uuid'': success | time=5ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102018 'Drop index 'component_uuid' in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102018 'Drop index 'component_uuid' in 'snapshots' table': success | time=7ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102019 'Rename 'component_uuid' in 'snapshots' table to 'root_component_uuid''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102019 'Rename 'component_uuid' in 'snapshots' table to 'root_component_uuid'': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102020 'Create index 'snapshots_root_component_uuid' in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102020 'Create index 'snapshots_root_component_uuid' in 'snapshots' table': success | time=16ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102021 'Create 'purged' column in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102021 'Create 'purged' column in 'snapshots' table': success | time=47ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102022 'Populate 'purged' column in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102022 'Populate 'purged' column in 'snapshots' table': success | time=50ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102023 'Make 'purged' column not nullable in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102023 'Make 'purged' column not nullable in 'snapshots' table': success | time=32ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102024 'Drop 'purge_status' column in 'snapshots' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102024 'Drop 'purge_status' column in 'snapshots' table': success | time=18ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102025 'Rename 'build_date' in 'snapshots' table to 'analysis_date'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102025 'Rename 'build_date' in 'snapshots' table to 'analysis_date': success | time=10ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102030 'Create table 'anticipated_transitions''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102030 'Create table 'anticipated_transitions'': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102031 'Increase size of 'ce_queue.is_last_key' from 55 to 80 characters'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102031 'Increase size of 'ce_queue.is_last_key' from 55 to 80 characters': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102032 'Increase size of 'ce_queue.main_is_last_key' from 55 to 80 characters'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102032 'Increase size of 'ce_queue.main_is_last_key' from 55 to 80 characters': success | time=7ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102033 'Add column 'clean_code_attribute' in 'rules' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102033 'Add column 'clean_code_attribute' in 'rules' table': success | time=20ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102034 'Populate 'clean_code_attribute' column in 'rules' table'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102034 'Populate 'clean_code_attribute' column in 'rules' table': success | time=9ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102036 'Create 'rules_default_impacts' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102036 'Create 'rules_default_impacts' table': success | time=20ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102037 'Create unique constraint index on 'rules_default_impacts' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102037 'Create unique constraint index on 'rules_default_impacts' table': success | time=8ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102038 'Create 'issues_impacts' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102038 'Create 'issues_impacts' table': success | time=7ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102039 'Create unique constraint index on 'issues_impacts' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102039 'Create unique constraint index on 'issues_impacts' table': success | time=8ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102040 'Populate default impacts for existing rules'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102040 'Populate default impacts for existing rules': success | time=19ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102041 'Fix sqale_index metric description in 'metrics' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102041 'Fix sqale_index metric description in 'metrics' table': success | time=3ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102042 'Create table 'github_orgs_groups''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102042 'Create table 'github_orgs_groups'': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102043 'Create 'previous_non_compliant_value' in 'new_code_periods' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102043 'Create 'previous_non_compliant_value' in 'new_code_periods' table': success | time=5ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102044 'Update column 'value' and populate column 'previous_non_compliant_value' in 'new_code_periods' table'...
+2025.05.28 18:21:58 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102044 'Update column 'value' and populate column 'previous_non_compliant_value' in 'new_code_periods' table': success | time=22ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102045 'Alter 'project_uuid' in 'user_dismissed_messages' - make it nullable'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102045 'Alter 'project_uuid' in 'user_dismissed_messages' - make it nullable': success | time=4ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102046 'Create index 'project_branches_project_uuid' in 'project_branches' table'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102046 'Create index 'project_branches_project_uuid' in 'project_branches' table': success | time=23ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102047 'Drop index 'idx_wbhk_dlvrs_wbhk_uuid' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102047 'Drop index 'idx_wbhk_dlvrs_wbhk_uuid' in 'webhook_deliveries'': success | time=5ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102048 'Create index 'wb_webhook_uuid_created_at' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102048 'Create index 'wb_webhook_uuid_created_at' in 'webhook_deliveries'': success | time=8ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102049 'Drop index 'wd_project_uuid' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102049 'Drop index 'wd_project_uuid' in 'webhook_deliveries'': success | time=1ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102050 'Create index 'wd_project_uuid_created_at' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102050 'Create index 'wd_project_uuid_created_at' in 'webhook_deliveries'': success | time=14ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102051 'Drop index 'ce_task_uuid' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102051 'Drop index 'ce_task_uuid' in 'webhook_deliveries'': success | time=13ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102052 'Create index 'wd_task_uuid_created_at' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102052 'Create index 'wd_task_uuid_created_at' in 'webhook_deliveries'': success | time=2ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102053 'Create index 'wd_created_at' in 'webhook_deliveries''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102053 'Create index 'wd_created_at' in 'webhook_deliveries'': success | time=14ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102054 'Insert property github.userConsentementForPermissionProvisioningRequired'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #102054 'Insert property github.userConsentementForPermissionProvisioningRequired': success | time=14ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103000 'Set 'sonar.qualityProfiles.allowDisableInheritedRules' to false for upgraded instances'...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103000 'Set 'sonar.qualityProfiles.allowDisableInheritedRules' to false for upgraded instances': success | time=14ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103001 'Add table 'github_perms_mapping''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103001 'Add table 'github_perms_mapping'': success | time=15ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103002 'Create unique index on 'github_perms_mapping''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103002 'Create unique index on 'github_perms_mapping'': success | time=15ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103003 'Add default mappings to 'github_perms_mapping''...
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103003 'Add default mappings to 'github_perms_mapping'': success | time=77ms
+2025.05.28 18:21:58 INFO  web[][DbMigrations] #103004 'Add 'clean_code_attribute' column in 'issues' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103004 'Add 'clean_code_attribute' column in 'issues' table': success | time=26ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103005 'Add 'creation_method' column in 'projects' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103005 'Add 'creation_method' column in 'projects' table': success | time=18ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103006 'Populate 'creation_method' column in 'projects' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103006 'Populate 'creation_method' column in 'projects' table': success | time=10ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103007 'Make 'creation_method' column in 'projects' table non-nullable'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103007 'Make 'creation_method' column in 'projects' table non-nullable': success | time=4ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103008 'Add 'rule_changes_uuid' column in 'qprofile_changes''...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103008 'Add 'rule_changes_uuid' column in 'qprofile_changes'': success | time=12ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103009 'Create table 'rule_changes''...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103009 'Create table 'rule_changes'': success | time=2ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103010 'Create table 'rule_impact_changes'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103010 'Create table 'rule_impact_changes': success | time=2ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103011 'Create index for 'rule_impact_changes'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103011 'Create index for 'rule_impact_changes': success | time=2ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103012 'Add 'sq_version' column in 'qprofile_changes' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103012 'Add 'sq_version' column in 'qprofile_changes' table': success | time=14ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103013 'Deduplicate potential records in 'properties' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103013 'Deduplicate potential records in 'properties' table': success | time=14ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103014 'Create unique index to 'properties' table'...
+2025.05.28 18:21:59 INFO  web[][DbMigrations] #103014 'Create unique index to 'properties' table': success | time=4ms
+2025.05.28 18:21:59 INFO  web[][DbMigrations] Executed DB migrations: success | time=2549ms
+2025.05.28 18:21:59 INFO  web[][o.s.s.p.Platform] Database has been automatically updated
+2025.05.28 18:21:59 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@216f01 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2025.05.28 18:21:59 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+2025.05.28 18:22:02 INFO  web[][o.h.v.i.util.Version] HV000001: Hibernate Validator null
+2025.05.28 18:22:03 INFO  web[][o.a.c.h.Http11Processor] Error parsing HTTP request header\n Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xf20x010x000x060xee0x030x030x87F^0xae0x08 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025.05.28 18:22:03 INFO  web[][o.a.c.h.Http11Processor] Error parsing HTTP request header\n Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x120x010x000x070x0e0x030x03MG0xc1d`0x10U0xb80x810x82+n0x0e0x8d0xd90xa10x9b0xe4*0xbbw0xd40x8dW,<t0x1cp0xaem0x06 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025.05.28 18:22:03 INFO  web[][o.s.s.e.IndexCreator] Create index [metadatas]
+2025.05.28 18:22:05 INFO  web[][o.s.s.e.IndexCreator] Create mapping metadatas
+2025.05.28 18:22:06 INFO  web[][o.s.s.e.IndexCreator] Create index [components]
+2025.05.28 18:22:07 INFO  web[][o.s.s.e.IndexCreator] Create mapping components
+2025.05.28 18:22:07 INFO  web[][o.s.s.e.IndexCreator] Create index [projectmeasures]
+2025.05.28 18:22:08 INFO  web[][o.s.s.e.IndexCreator] Create mapping projectmeasures
+2025.05.28 18:22:08 INFO  web[][o.s.s.e.IndexCreator] Create index [rules]
+2025.05.28 18:22:09 INFO  web[][o.s.s.e.IndexCreator] Create mapping rules
+2025.05.28 18:22:09 INFO  web[][o.s.s.e.IndexCreator] Create index [issues]
+2025.05.28 18:22:11 INFO  web[][o.s.s.e.IndexCreator] Create mapping issues
+2025.05.28 18:22:11 INFO  web[][o.s.s.e.IndexCreator] Create index [views]
+2025.05.28 18:22:12 INFO  web[][o.s.s.e.IndexCreator] Create mapping views
+2025.05.28 18:22:12 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AZcYITbMoQyExEr9PP0h
+2025.05.28 18:22:12 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2025.05.28 18:22:13 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties
+2025.05.28 18:22:18 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/issues/list
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+2025.05.28 18:22:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/dismiss_message/check
+2025.05.28 18:22:19 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2025.05.28 18:22:19 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2025.05.28 18:22:19 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2025.05.28 18:22:19 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2025.05.28 18:22:20 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2025.05.28 18:22:20 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2025.05.28 18:22:21 INFO  web[][o.s.s.q.RegisterQualityGates] Built-in quality gate's conditions of [Sonar way] has been updated
+2025.05.28 18:22:21 INFO  web[][o.s.s.r.r.RulesRegistrant] Register rules
+2025.05.28 18:24:08 INFO  web[][o.s.s.q.b.BuiltInQProfileRepositoryImpl] Load quality profiles
+2025.05.28 18:24:08 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2025.05.28 18:24:08 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kubernetes/Sonar way
+2025.05.28 18:24:09 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile css/Sonar way
+2025.05.28 18:24:09 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile scala/Sonar way
+2025.05.28 18:24:09 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile jsp/Sonar way
+2025.05.28 18:24:10 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile js/Sonar way
+2025.05.28 18:24:10 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile py/Sonar way
+2025.05.28 18:24:11 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile docker/Sonar way
+2025.05.28 18:24:12 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile java/Sonar way
+2025.05.28 18:24:13 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile web/Sonar way
+2025.05.28 18:24:13 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile flex/Sonar way
+2025.05.28 18:24:13 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile xml/Sonar way
+2025.05.28 18:24:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile json/Sonar way
+2025.05.28 18:24:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile text/Sonar way
+2025.05.28 18:24:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile vbnet/Sonar way
+2025.05.28 18:24:14 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cloudformation/Sonar way
+2025.05.28 18:24:15 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile yaml/Sonar way
+2025.05.28 18:24:15 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kotlin/Sonar way
+2025.05.28 18:24:15 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile go/Sonar way
+2025.05.28 18:24:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile secrets/Sonar way
+2025.05.28 18:24:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ruby/Sonar way
+2025.05.28 18:24:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cs/Sonar way
+2025.05.28 18:24:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile php/Sonar way
+2025.05.28 18:24:21 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile terraform/Sonar way
+2025.05.28 18:24:21 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile azureresourcemanager/Sonar way
+2025.05.28 18:24:22 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ts/Sonar way
+2025.05.28 18:24:22 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2025.05.28 18:24:22 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2025.05.28 18:24:23 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@1e6bfb85 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[/api/v2/*]}]
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@133a02a2 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@2baafbc5 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@4ad8b8d2 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@b2ed5df [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2025.05.28 18:24:23 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@48c2e90a [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@34ca5704 [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@3b5b7767 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@4fe850c3 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@5022c73f [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@390ea892 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@4509b77c [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@ab3be88 [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@46a6ddfe [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+2025.05.28 18:24:24 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@19f3e699 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2025.05.28 18:24:25 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure]...
+2025.05.28 18:24:26 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure] done | time=994ms
+2025.05.28 18:24:26 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component]...
+2025.05.28 18:24:26 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component] done | time=374ms
+2025.05.28 18:24:27 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view]...
+2025.05.28 18:24:27 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view] done | time=712ms
+2025.05.28 18:24:27 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue]...
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 pending indexation task found to be deleted...
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 completed indexation task found to be deleted...
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Indexation task deletion complete.
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Deleting tasks characteristics...
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Tasks characteristics deletion complete.
+2025.05.28 18:24:27 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 branch found in need of issue sync.
+2025.05.28 18:24:27 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue] done | time=107ms
+2025.05.28 18:24:27 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth]...
+2025.05.28 18:24:28 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth] done | time=287ms
+2025.05.28 18:24:28 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2025.05.28 18:24:29 INFO  web[][o.s.s.p.Platform] Web Server is operational
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] ltsVersion seems wrong as it is not listed in SonarQube versions
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] jqassistant.3.0.0.sqVersions should be defined
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin jQAssistant version 3.0.0 should declare compatible SQ versions
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] l10nru.25.1.sqVersions should be defined
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin Russian Pack version 25.1 should declare compatible SQ versions
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] l10nzh.24.12.sqVersions should be defined
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin Chinese Pack version 24.12 should declare compatible SQ versions
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] l10nzh.25.1.sqVersions should be defined
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin Chinese Pack version 25.1 should declare compatible SQ versions
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] l10nzhtw.1.2.sqVersions should be defined
+2025.05.28 18:26:13 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin TraditionalChinese Pack version 1.2 should declare compatible SQ versions
+2025.05.28 18:26:14 WARN  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] The plugin l10nzhtw is not compatible with any public SQ versions.
+2025.05.28 18:26:14 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] openedge.2.30.0.sqVersions should be defined
+2025.05.28 18:26:14 ERROR web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenterDeserializer] Plugin OpenEdge version 2.30.0 should declare compatible SQ versions
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:14 INFO  web[AZcYI4sd7pdJzH/AAAAg][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'cayc' version : 2.2.2.656 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'config' version : 1.3.0.654 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'csharp' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'flex' version : 2.12.0.4568 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'go' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'iac' version : 1.22.0.7057 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'jacoco' version : 1.3.0.1538 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'java' version : 7.27.1.33504 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'javascript' version : 10.9.0.24449 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'kotlin' version : 2.18.0.2938 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'php' version : 3.33.0.11274 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'python' version : 4.10.0.13725 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'ruby' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'sonarscala' version : 1.15.0.4655 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'text' version : 2.7.1.1388 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'vbnet' version : 9.13.0.79967 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'web' version : 3.11.0.4708 has not been found on the update center.
+2025.05.28 18:26:19 INFO  web[AZcYI4sd7pdJzH/AAAAy][o.s.u.c.UpdateCenter] The plugin 'xml' version : 2.10.0.4108 has not been found on the update center.
+2025.05.28 19:57:51 ERROR web[][o.s.s.m.ElasticSearchMetricTask] Failed to query ES status
+org.sonar.server.es.ElasticsearchException: Fail to execute es requestES cluster health request
+	at org.sonar.server.es.EsClient.execute(EsClient.java:336)
+	at org.sonar.server.es.EsClient.clusterHealth(EsClient.java:210)
+	at org.sonar.server.monitoring.ElasticSearchMetricTask.updateElasticSearchHealthStatus(ElasticSearchMetricTask.java:56)
+	at org.sonar.server.monitoring.ElasticSearchMetricTask.run(ElasticSearchMetricTask.java:50)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: 60,000 milliseconds timeout on connection http-outgoing-1 [ACTIVE]
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:917)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:300)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:288)
+	at org.elasticsearch.client.RestHighLevelClient.performClientRequest(RestHighLevelClient.java:2699)
+	at org.elasticsearch.client.RestHighLevelClient.internalPerformRequest(RestHighLevelClient.java:2171)
+	at org.elasticsearch.client.RestHighLevelClient.performRequest(RestHighLevelClient.java:2137)
+	at org.elasticsearch.client.RestHighLevelClient.performRequestAndParseEntity(RestHighLevelClient.java:2105)
+	at org.elasticsearch.client.ClusterClient.health(ClusterClient.java:151)
+	at org.sonar.server.es.EsClient.lambda$clusterHealth$27(EsClient.java:210)
+	at org.sonar.server.es.EsClient.execute(EsClient.java:334)
+	... 9 common frames omitted
+Caused by: java.net.SocketTimeoutException: 60,000 milliseconds timeout on connection http-outgoing-1 [ACTIVE]
+	at org.apache.http.nio.protocol.HttpAsyncRequestExecutor.timeout(HttpAsyncRequestExecutor.java:387)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onTimeout(InternalIODispatch.java:92)
+	at org.apache.http.impl.nio.client.InternalIODispatch.onTimeout(InternalIODispatch.java:39)
+	at org.apache.http.impl.nio.reactor.AbstractIODispatch.timeout(AbstractIODispatch.java:175)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.sessionTimedOut(BaseIOReactor.java:261)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.timeoutCheck(AbstractIOReactor.java:502)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.validate(BaseIOReactor.java:211)
+	at org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:280)
+	at org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:591)
+	... 1 common frames omitted

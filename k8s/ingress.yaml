@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: "flask-app"
+      http:
+        paths:
+          - path: /calc
+            pathType: Prefix
+            backend:
+              service:
+                name: flaskapp
+                port:
+                  number: 8070
+          - path: /log
+            pathType: Prefix
+            backend:
+              service:
+                name: logger
+                port:
+                  number: 5001
