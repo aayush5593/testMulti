@@ -5,7 +5,7 @@ pipeline {
         FLASK_IMAGE = "aayushhhsharma/flaskapp"
         LOGGER_IMAGE = "aayushhhsharma/logger"
         DB_IMAGE = "aayushhhsharma/db"
-	KUBECONFIG = "${WORKSPACE}/kubeconfig-embedded"
+	// KUBECONFIG = "${WORKSPACE}/kubeconfig-embedded"
     }
 
     stages {
