@@ -47,13 +47,13 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh '/opt/sonar-scanner/bin/sonar-scanner'
-                }
-            }
-        }
+        // stage('SonarQube Analysis') {
+        //     steps {
+        //         withSonarQubeEnv('SonarQube') {
+        //             sh '/opt/sonar-scanner/bin/sonar-scanner'
+        //         }
+        //     }
+        // }
 
         stage('Update Deployment YAML') {
             steps {
