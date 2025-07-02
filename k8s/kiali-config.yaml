@@ -50,7 +50,7 @@ data:
         log_level: info
         sampler_rate: "1"
         time_field_format: 2006-01-02T15:04:05Z07:00
-      namespace: istio-system
+      namespace: default
       node_selector: {}
       pod_annotations:
         proxy.istio.io/config: '{ "holdApplicationUntilProxyStarts": true }'
@@ -87,11 +87,11 @@ data:
       custom_dashboards:
         enabled: true
       istio:
-        root_namespace: istio-system
+        root_namespace: default
     identity:
       cert_file: ""
       private_key_file: ""
-    istio_namespace: istio-system
+    istio_namespace: default
     kiali_feature_flags:
       disabled_features: []
       validations:
@@ -110,7 +110,7 @@ kind: ConfigMap
 metadata:
   annotations:
     meta.helm.sh/release-name: kiali
-    meta.helm.sh/release-namespace: istio-system
+    meta.helm.sh/release-namespace: default
   creationTimestamp: "2025-06-01T16:45:26Z"
   labels:
     app: kiali
@@ -122,6 +122,6 @@ metadata:
     helm.sh/chart: kiali-server-2.10.0
     version: v2.10.0
   name: kiali
-  namespace: istio-system
+  namespace: default
   resourceVersion: "43017"
   uid: d0c76b42-1dbc-4bcd-9817-05879576ed50
