@@ -1,1 +1,4 @@
 minikube-linux-amd64
+sonarqube/data/
+sonarqube/logs/
+k8s/istio-1.26.1/
