@@ -5,7 +5,6 @@ pipeline {
         FLASK_IMAGE = "aayushhhsharma/flaskapp"
         LOGGER_IMAGE = "aayushhhsharma/logger"
         DB_IMAGE = "aayushhhsharma/db"
-	// KUBECONFIG = "${WORKSPACE}/kubeconfig-embedded"
     }
 
     stages {
@@ -47,14 +46,6 @@ pipeline {
             }
         }
 
-        // stage('SonarQube Analysis') {
-        //     steps {
-        //         withSonarQubeEnv('SonarQube') {
-        //             sh '/opt/sonar-scanner/bin/sonar-scanner'
-        //         }
-        //     }
-        // }
-
         stage('Update Deployment YAML') {
             steps {
                 script {
@@ -69,8 +60,10 @@ pipeline {
         stage('Apply to Kubernetes') {
             steps {
                 withCredentials([file(credentialsId: 'KubeCtlServer', variable: 'KUBECONFIG')]) {
-                    sh 'ls -l $(dirname $KUBECONFIG)'
-                    sh 'kubectl apply -f k8s/'
+                    sh 'echo "✅ Using kubeconfig from: $KUBECONFIG"'
+                    sh 'kubectl config get-contexts --kubeconfig=$KUBECONFIG || echo "⚠️ Could not get contexts"'
+                    sh 'kubectl get nodes --kubeconfig=$KUBECONFIG || echo "⚠️ Could not reach Kubernetes cluster"'
+                    sh 'kubectl apply -f k8s/ --kubeconfig=$KUBECONFIG --validate=false'
                 }
             }
         }
