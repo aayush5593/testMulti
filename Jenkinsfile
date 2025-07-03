@@ -63,6 +63,7 @@ pipeline {
                     sh 'echo "✅ Using kubeconfig from: $KUBECONFIG"'
                     sh 'kubectl config get-contexts --kubeconfig=$KUBECONFIG || echo "⚠️ Could not get contexts"'
                     sh 'kubectl get nodes --kubeconfig=$KUBECONFIG || echo "⚠️ Could not reach Kubernetes cluster"'
+                     sh 'kubectl delete deployment prometheus --ignore-not-found=true --kubeconfig=$KUBECONFIG'
                     sh 'kubectl apply -f k8s/ --kubeconfig=$KUBECONFIG --validate=false'
                 }
             }
